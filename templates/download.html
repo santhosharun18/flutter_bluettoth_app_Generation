@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your App is Ready!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 Your Flutter App is Ready!</h1>
+            <p>Successfully generated and built your mobile application</p>
+        </header>
+
+        <main>
+            <div class="success-card">
+                {% if state.apk_path %}
+                <div class="app-info">
+                    <div class="app-icon">📱</div>
+                    <h2>{{ state.structured_requirements.get('app_name', 'Generated App') }}</h2>
+                    <p>{{ state.structured_requirements.get('description', 'Your Flutter app is ready to install') }}</p>
+                    
+                    <div class="app-details">
+                        <div class="detail-item">
+                            <strong>Features:</strong>
+                            {{ state.structured_requirements.get('features', [])|join(', ') }}
+                        </div>
+                        <div class="detail-item">
+                            <strong>Color Theme:</strong>
+                            {{ state.structured_requirements.get('color_theme', 'Blue') }}
+                        </div>
+                        <div class="detail-item">
+                            <strong>Components:</strong>
+                            {{ state.structured_requirements.get('ui_components', [])|join(', ') }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <a href="/download/{{ session_id }}" class="btn-download">
+                        <span class="btn-icon">📥</span>
+                        Download APK
+                    </a>
+                    
+                    <div class="install-instructions">
+                        <h4>Installation Instructions:</h4>
+                        <ol>
+                            <li>Download the APK file to your Android device</li>
+                            <li>Enable "Install from Unknown Sources" in Android settings</li>
+                            <li>Open the APK file and follow installation prompts</li>
+                            <li>Launch your new Flutter app!</li>
+                        </ol>
+                    </div>
+                </div>
+                {% else %}
+                <div class="error-card">
+                    <h3>❌ Build Failed</h3>
+                    <p>Unfortunately, we encountered errors while building your app.</p>
+                    {% if state.error_log %}
+                    <div class="error-details">
+                        <h4>Error Details:</h4>
+                        <ul>
+                            {% for error in state.error_log %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <div class="actions">
+                    <a href="/" class="btn-secondary">
+                        ← Generate Another App
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

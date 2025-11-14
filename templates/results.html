@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App Generation Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .code-block {
+            background-color: #1e293b; /* slate-800 */
+            color: #e2e8f0; /* slate-200 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-4xl mx-auto bg-slate-800 rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-bold mb-4 text-center text-purple-400">Generation Complete</h1>
+        
+        <div class="mb-8 p-6 rounded-lg bg-slate-700">
+            <h2 class="text-xl font-semibold mb-2">App: {{ state.structured_requirements.get('app_name', 'Generated App') }}</h2>
+            <p class="text-slate-400">Status: <span class="font-bold {{ 'text-green-400' if state.build_status == 'success' else 'text-red-400' }}">{{ state.build_status.capitalize() }}</span></p>
+
+            <!-- This section shows download button AND QR code on success -->
+            {% if state.apk_path and state.build_status == 'completed' %}
+            <div class="download-section">
+                <h2>📱 Download Your App</h2>
+                <div class="download-container">
+                    <a href="/download/{{ session_id }}" class="download-btn">📥 Download APK</a>
+                    
+                    {% if qr_code_data %}
+                    <div class="qr-container">
+                        <h3>📱 Scan QR Code</h3>
+                        <img src="data:image/png;base64,{{ qr_code_data }}" alt="QR Code" style="max-width: 200px;">
+                    </div>
+                    {% else %}
+                    <p>QR Code generation in progress...</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+
+        </div>
+
+        {% if state.error_log %}
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-3 text-red-400">Error Log</h2>
+            <div class="code-block text-red-300">
+                <pre><code>{% for error in state.error_log %}{{ error }}\n{% endfor %}</code></pre>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if state.generated_files %}
+        <div class="mb-4">
+            <h2 class="text-2xl font-semibold mb-4 text-purple-300">Generated Source Code</h2>
+            {% for filename, content in state.generated_files.items() %}
+                <div class="mb-6">
+                    <h3 class="text-lg font-mono p-2 bg-slate-700 rounded-t-md">{{ filename }}</h3>
+                    <div class="code-block rounded-b-md">
+                        <pre><code>{{ content }}</code></pre>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-8">
+             <a href="/" class="text-purple-400 hover:text-purple-300">&larr; Generate Another App</a>
+        </div>
+    </div>
+</body>
+</html>

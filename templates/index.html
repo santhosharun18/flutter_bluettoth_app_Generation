@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter APK Generator - LangGraph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Flutter APK Generator</h1>
+            <p>Generate complete Flutter mobile apps from simple text descriptions using AI agents</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Describe Your App</h2>
+                <form action="/generate" method="POST" id="generateForm">
+                    <div class="form-group">
+                        <label for="prompt">What kind of mobile app do you want to create?</label>
+                        <textarea 
+                            id="prompt" 
+                            name="prompt" 
+                            rows="6" 
+                            placeholder="Example: An app with an ON/OFF button and a slider to control an LED light strip."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- === NEW HARDWARE COMMANDS BOX ADDED HERE === -->
+                    <div class="form-group">
+                        <label for="hardware_commands">Define Your Hardware's Bluetooth Commands (Optional)</label>
+                        <textarea 
+                            id="hardware_commands" 
+                            name="hardware_commands" 
+                            rows="6" 
+                            placeholder="# Define the exact commands your device expects.&#10;# Examples:&#10;button &quot;Turn On&quot;: sends &quot;<LED_ON>&quot;&#10;button &quot;Turn Off&quot;: sends &quot;<LED_OFF>&quot;&#10;slider &quot;Brightness&quot;: sends &quot;BRIGHT:<value>&quot;&#10;color_picker &quot;Set Color&quot;: sends &quot;RGB:<r>,<g>,<b>&quot;"
+                        ></textarea>
+                    </div>
+                    <!-- === END OF NEW BOX === -->
+                    
+                    <button type="submit" class="btn-primary">
+                        <span class="btn-icon">⚡</span>
+                        Generate Flutter App
+                    </button>
+                </form>
+            </div>
+
+            <div class="features">
+                <h3>How It Works</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h4>1. Prompt Analysis</h4>
+                        <p>AI analyzes your description and extracts requirements</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏗️</div>
+                        <h4>2. Architecture Design</h4>
+                        <p>Creates Flutter project structure and component hierarchy</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💻</div>
+                        <h4>3. Code Generation</h4>
+                        <p>Generates complete Flutter source code files</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>4. APK Building</h4>
+                        <p>Compiles and builds ready-to-install APK file</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by LangGraph + Groq + Flutter</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
