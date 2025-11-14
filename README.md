@@ -167,7 +167,7 @@ The **Flutter Bluetooth App Generator** is a sophisticated code generation platf
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/10_android_install.png" alt="Install" width="400"/><br/>
+      <img src="screenshots/10_android_install.jpg" alt="Install" width="400"/><br/>
       <b>Android Installation</b><br/>
       <sub>APK install flow with permissions</sub>
     </td>
