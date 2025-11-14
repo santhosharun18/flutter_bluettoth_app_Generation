@@ -323,29 +323,29 @@ text
 
 ### **System Requirements**
 
-1. **Python 3.8 or higher**
+#### 1. Python 3.8 or higher
 python --version # Should show 3.8+
 
 text
 
-2. **Flutter SDK (3.x recommended)**
+#### 2. Flutter SDK (3.x recommended)
 - Download from [flutter.dev](https://flutter.dev)
 - Add Flutter to your PATH
 - Verify installation:
-  ```
-  flutter --version
-  flutter doctor
-  ```
+flutter --version
+flutter doctor
 
-3. **Android SDK**
+text
+
+#### 3. Android SDK
 - Install Android Studio or standalone Android SDK
 - Required API levels: 21 (minimum) to 35 (target)
 - Accept Android licenses:
-  ```
-  flutter doctor --android-licenses
-  ```
+flutter doctor --android-licenses
 
-4. **AI API Keys**
+text
+
+#### 4. AI API Keys
 - **Anthropic API Key**: Get from [console.anthropic.com](https://console.anthropic.com)
 - **Groq API Key**: Get from [console.groq.com](https://console.groq.com)
 - At least one is required, both recommended for flexibility
@@ -360,8 +360,8 @@ text
 ## 🚀 Installation
 
 ### **Step 1: Clone the Repository**
-git clone https://github.com/yourusername/flutter-bluetooth-app-generator.git
-cd flutter-bluetooth-app-generator
+git clone https://github.com/santhosharun18/flutter_bluettoth_app_Generation.git
+cd flutter_bluettoth_app_Generation
 
 text
 
@@ -481,22 +481,22 @@ text
 
 ### **Basic Workflow**
 
-1. **Start the Server**
+#### 1. Start the Server
 python app.py
 
 text
 
-2. **Open Web Interface**
+#### 2. Open Web Interface
 Navigate to `http://localhost:5000`
 
-3. **Describe Your App**
+#### 3. Describe Your App
 Enter a natural language description. Examples:
 
 - *"Create a Bluetooth app to control an RGB LED strip and display temperature from a DHT11 sensor"*
 - *"Build an app to control 4 relays and monitor light levels with an LDR sensor"*
 - *"I need an app to control a servo motor with a slider and turn on/off a buzzer"*
 
-4. **Add Hardware Commands (Optional)**
+#### 4. Add Hardware Commands (Optional)
 Specify custom device commands in JSON format:
 {
 "relay": {"on": "R1", "off": "R0"},
@@ -507,10 +507,10 @@ Specify custom device commands in JSON format:
 
 text
 
-5. **Generate**
+#### 5. Generate
 Click "Generate App" and watch the progress bar
 
-6. **Download APK**
+#### 6. Download APK
 - **Method 1 (Recommended)**: Scan QR code with your phone for instant download
 - **Method 2**: Click "Download APK" button
 - Install and test!
@@ -892,10 +892,20 @@ text
 **Problem**: APK build fails with Gradle errors
 
 **Solutions**:
-1. Accept Android SDK licenses: `flutter doctor --android-licenses`
-2. Update Flutter: `flutter upgrade`
+1. Accept Android SDK licenses:
+flutter doctor --android-licenses
+
+text
+2. Update Flutter:
+flutter upgrade
+
+text
 3. Check `minSdkVersion` compatibility (should be 21)
-4. Clear cache: `flutter clean && flutter pub get`
+4. Clear cache:
+flutter clean
+flutter pub get
+
+text
 
 ---
 
@@ -1002,11 +1012,20 @@ text
 Contributions are welcome! Please follow these guidelines:
 
 1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+2. **Create a feature branch**:
+git checkout -b feature/amazing-feature
+
+text
 3. **Make your changes**
 4. **Test thoroughly**: Generate apps with different features
-5. **Commit with descriptive messages**: `git commit -m "Add stepper motor support"`
-6. **Push to your fork**: `git push origin feature/amazing-feature`
+5. **Commit with descriptive messages**:
+git commit -m "Add stepper motor support"
+
+text
+6. **Push to your fork**:
+git push origin feature/amazing-feature
+
+text
 7. **Open a Pull Request**
 
 ### **Areas for Contribution**
@@ -1084,6 +1103,6 @@ This project builds upon amazing open-source technologies:
 
 If this project helps you, please give it a ⭐ on GitHub!
 
-[![Star on GitHub](https://img.shields.io/github/stars/yourusername/flutter-bluetooth-app-generator?style=social)](https://github.com/santhosharun18/flutter_bluettoth_app_Generation)
+[![Star on GitHub](https://img.shields.io/github/stars/santhosharun18/flutter_bluettoth_app_Generation?style=social)](https://github.com/santhosharun18/flutter_bluettoth_app_Generation)
 
 </div>
