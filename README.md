@@ -122,6 +122,11 @@ The **Flutter Bluetooth App Generator** is a sophisticated code generation platf
       <sub>Download via QR scan or direct button</sub>
     </td>
     <td align="center">
+      <img src="screenshots/05_qr_code_scan_2.png" alt="Result Page" width="400"/><br/>
+      <b>Result Page with  Code</b><br/>
+      <sub>Gnerated code show </sub>
+    </td>
+    <td align="center">
       <img src="screenshots/05_qr_code_scan.png" alt="QR Scan" width="400"/><br/>
       <b>Mobile QR Code Scan</b><br/>
       <sub>Instant APK download to phone</sub>
@@ -134,28 +139,27 @@ The **Flutter Bluetooth App Generator** is a sophisticated code generation platf
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/06_app_device_scanner.png" alt="Scanner" width="250"/><br/>
+      <img src="screenshots/06_app_device_scanner.jpg" alt="Scanner" width="250"/><br/>
+      <b>Device Scanner</b><br/>
+      <sub>mobile qr scan </sub>
+    </td>
+    <td align="center">
+      <img src="screenshots/06_app_device_scanner_2.jpg" alt="Scanner" width="250"/><br/>
       <b>Device Scanner</b><br/>
       <sub>BLE device discovery</sub>
     </td>
     <td align="center">
-      <img src="screenshots/07_app_connected.png" alt="Connected" width="250"/><br/>
+      <img src="screenshots/07_app_connected.jpg" alt="Connected" width="250"/><br/>
       <b>Connected View</b><br/>
       <sub>Real-time sensor data</sub>
     </td>
     <td align="center">
-      <img src="screenshots/08_app_controls.png" alt="Controls" width="250"/><br/>
+      <img src="screenshots/08_app_controls.jpg" alt="Controls" width="250"/><br/>
       <b>Control Interface</b><br/>
       <sub>Buttons, sliders, toggles</sub>
     </td>
   </tr>
-  <tr>
-    <td colspan="3" align="center">
-      <img src="screenshots/09_rgb_control.png" alt="RGB Control" width="250"/><br/>
-      <b>RGB LED Control</b><br/>
-      <sub>Color picker and brightness slider</sub>
-    </td>
-  </tr>
+  
 </table>
 
 ### Installation Process
@@ -1023,7 +1027,7 @@ Contributions are welcome! Please follow these guidelines:
 
 **MIT License**
 
-Copyright (c) 2025 [Your Name]
+Copyright (c) 2025 Santhosh D
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -1047,9 +1051,9 @@ This project builds upon amazing open-source technologies:
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/flutter-bluetooth-app-generator/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/flutter-bluetooth-app-generator/discussions)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/santhosharun18/flutter_bluettoth_app_Generation/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/santhosharun18/flutter_bluettoth_app_Generation/discussions)
+- **Email**: santhosharun31@gmail.com
 
 ---
 
@@ -1080,6 +1084,6 @@ This project builds upon amazing open-source technologies:
 
 If this project helps you, please give it a ⭐ on GitHub!
 
-[![Star on GitHub](https://img.shields.io/github/stars/yourusername/flutter-bluetooth-app-generator?style=social)](https://github.com/yourusername/flutter-bluetooth-app-generator)
+[![Star on GitHub](https://img.shields.io/github/stars/yourusername/flutter-bluetooth-app-generator?style=social)](https://github.com/santhosharun18/flutter_bluettoth_app_Generation)
 
 </div>
